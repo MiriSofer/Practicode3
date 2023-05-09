@@ -11,10 +11,13 @@ function App() {
   }
 
   async function createTodo(e) {
+
+
     e.preventDefault();
     await service.addTask(newTodo);
     setNewTodo("");//clear input
     await getTodos();//refresh tasks list (in order to see the new one)
+    console.log("")
   }
 
   async function updateCompleted(todo, isComplete) {
