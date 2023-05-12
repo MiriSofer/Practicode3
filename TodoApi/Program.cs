@@ -63,4 +63,5 @@ app.MapDelete("/items/{id}", async(ToDoDbContext context, int id)=>{
     await context.SaveChangesAsync();
     return Results.NoContent();
 });
+app.MapGet("/",()=>"TodoApi - Api is running");
 app.Run();
