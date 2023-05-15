@@ -40,7 +40,7 @@ app.MapGet("/items", (ToDoDbContext context) =>
     return context.Items.ToList();
 });
 
-app.MapPost("/items", async(ToDoDbContext context, Items item)=>{
+app.MapPost("/items", async(ToDoDbContext context, Item item)=>{
     context.Add(item);
     await context.SaveChangesAsync();
     return item;
